@@ -1,6 +1,6 @@
 <template>
   <div class="single-state">
-    <h1>Details about {{ this.stateName}}</h1>
+    <h1>Details about {{ state }}</h1>
     <div v-for="(state,index) in singleState.slice(0,1)" :key="index">
         <img :src="state.flag" alt="" class="image">
         <h2>capital: {{ state.capital}}</h2>
@@ -31,10 +31,15 @@
 <script>
 export default {
   name: 'StatesSingle',
+  props: {
+    state: {
+      type: String,
+      required: true
+    }
+  },
   data () {
     return {
-      singleState: [],
-      stateName: this.$route.params.state
+      singleState: []
     }
   },
   methods: {
@@ -43,14 +48,13 @@ export default {
     }
   },
   created() {
-    this.axios.get(`https://restcountries.eu/rest/v2/name/${this.stateName}`).then(res => {
+    this.axios.get(`https://restcountries.eu/rest/v2/name/${this.state}`).then(res => {
       this.singleState = res.data;
     })
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
   .single-state {
       height: 100vh;

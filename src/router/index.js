@@ -20,7 +20,8 @@ export default new Router({
     {
       path: '/state/:state',
       name: 'StatesSingle',
-      component: () => import('@/components/StatesSingle')
+      component: () => import('@/components/StatesSingle'),
+      props: true
     },
     {
       path: '/signup',
