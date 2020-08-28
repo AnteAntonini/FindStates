@@ -39,7 +39,10 @@ export default {
     this.axios.get(`https://restcountries.eu/rest/v2/region/${this.region}`).then(res => {
       this.allStates = res.data;
       this.stateName = res.data.name;
-    })
+    }).
+    catch(err => {
+      console.log(err);
+    }); 
   }
 }
 </script>
