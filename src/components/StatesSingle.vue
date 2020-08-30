@@ -51,6 +51,9 @@ export default {
     this.axios.get(`https://restcountries.eu/rest/v2/name/${this.state}`).then(res => {
       this.singleState = res.data;
     })
+    .catch(err => {
+      console.log(err);
+    });
   }
 }
 </script>

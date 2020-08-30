@@ -3,9 +3,10 @@
     <ul class="menu">
       <li class="logo"><a href="">Discover</a></li>
       <li class="item home"><router-link :to="{name: 'HomePage'}">Home</router-link></li>
-      <li v-show="$route.path!=='/login'" class="item button"><router-link :to="{name: 'FormLogin'}">Log In</router-link></li>
-      <li v-show="$route.path!=='/signup'" class="item button secondary"><router-link :to="{name: 'FormSignUp'}">Sign Up</router-link></li>
-      <li id="menuToggle" @click="klik">
+      <li class="item states"><router-link :to="{name: 'StatesFavorite'}">Favorite States</router-link></li>
+      <li v-show="checkCurrentPath('login')" class="item button"><router-link :to="{name: 'FormLogin'}">Log In</router-link></li>
+      <li v-show="checkCurrentPath('signup')" class="item button secondary"><router-link :to="{name: 'FormSignUp'}">Sign Up</router-link></li>
+      <li id="menuToggle">
         <span></span>
         <span></span>
         <span></span>
@@ -28,8 +29,8 @@ export default {
     }
   },
   methods: {
-    klik() {
-      
+    checkCurrentPath(path) {
+      return this.$route.path !== "/"+path;
     }
   }
 
@@ -66,6 +67,11 @@ a {
 .logo {
   font-size: 1.4rem;
   float: left;
+}
+.states {
+  font-size: 1.2rem;
+  position: absolute;
+  left: 15rem;
 }
 .home {
   font-size: 1.4rem;

@@ -51,9 +51,9 @@ export default {
     }
   },
   created() {
-    this.axios.get('https://restcountries.eu/rest/v2/region/europe').then(res => {
-      
-    })
+    this.axios.get('https://restcountries.eu/rest/v2/region/europe').catch(err => {
+      console.log(err);
+    });
   }
 }
 </script>

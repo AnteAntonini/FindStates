@@ -34,6 +34,11 @@ export default new Router({
       component: () => import('@/components/FormLogin')
     },
     {
+      path: '/favStates',
+      name: 'StatesFavorite',
+      component: () => import('@/components/StatesFavorite')
+    },
+    {
       path: '/**',
       component: () => import('@/components/NotFound')
     }
