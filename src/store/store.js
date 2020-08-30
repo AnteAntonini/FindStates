@@ -14,8 +14,9 @@ export const store = new Vuex.Store({
         }
     },
     mutations: {
-        selectedState: (state, payload) => {                         
+        selectedState: (state, payload) => {                        
             state.favStates = payload;
+            console.log(state.favStates);
         }
     },  
     actions: {

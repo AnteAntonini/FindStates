@@ -37,7 +37,7 @@ export default {
       get () {
       return this.$store.state.favStates;
       },
-    set (value) {
+      set (value) {
       this.$store.commit('selectedState', value)
       }
     }

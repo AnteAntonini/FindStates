@@ -1,6 +1,9 @@
 <template>
   <div class="states-favorite">
     <h1>Your favorite states:</h1>
+    <div v-for="(state,index) in favStates" :key="index">
+      {{state}}
+    </div>
   </div>
 </template>
 
@@ -14,6 +17,7 @@ export default {
   },
   computed: {
     favStates() {
+      console.log(this.$store.state.favStates);
       return this.$store.state.favStates;
     }
   }
@@ -23,7 +27,10 @@ export default {
 <style scoped>
   * {
       margin-top: 2rem;
-      height: 80vh;
       width: 100%;
+  }
+  .states-favorite {
+    height: 100%;
+    height: 83vh;
   }
 </style>
