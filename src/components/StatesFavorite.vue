@@ -26,7 +26,7 @@ export default {
 
 <style scoped>
   * {
-      margin-top: 2rem;
+      margin-top: 2rem; 
       width: 100%;
   }
   .states-favorite {
