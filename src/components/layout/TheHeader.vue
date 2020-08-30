@@ -3,7 +3,10 @@
     <ul class="menu">
       <li class="logo"><a href="">Discover</a></li>
       <li class="item home"><router-link :to="{name: 'HomePage'}">Home</router-link></li>
+<<<<<<< HEAD
       <li class="item states"><router-link :to="{name: 'StatesFavorite'}">Favorite States</router-link></li>
+=======
+>>>>>>> f88d21f48fc903bb205948914ab00f6d51a7891d
       <li v-show="checkCurrentPath('login')" class="item button"><router-link :to="{name: 'FormLogin'}">Log In</router-link></li>
       <li v-show="checkCurrentPath('signup')" class="item button secondary"><router-link :to="{name: 'FormSignUp'}">Sign Up</router-link></li>
       <li id="menuToggle">
