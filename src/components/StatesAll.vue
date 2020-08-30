@@ -4,11 +4,12 @@
     <ul v-for="(state,index) in allStates" :key="index">
       <li class="item" @click="scrollToTop"><router-link :to="{name: 'StatesSingle', params: {state: state.name}}">{{state.name}} </router-link>
         <label class="container">
-          <input type="checkbox">
+          <input type="checkbox" v-model="selectedStates" :value="state.name">
           <span class="checkmark"></span>
         </label>
       </li>
     </ul>
+    {{ this.selectedStates}}
   </div>
 </template>
 
@@ -29,6 +30,16 @@ export default {
   methods: {
     scrollToTop() {
       window.scrollTo(0,0);
+    }
+  },
+  computed: {
+    selectedStates: {
+      get () {
+      return this.$store.state.favStates;
+      },
+    set (value) {
+      this.$store.commit('selectedState', value)
+      }
     }
   },
   created() {
