@@ -44,7 +44,9 @@ export default {
     box-sizing: border-box;
 }
 .login {
-    height: 72vh;
+    height: 81.5vh;
+    width: 100%;
+    overflow-y:hidden;
     @include formMixin;
 }
 

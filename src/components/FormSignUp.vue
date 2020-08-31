@@ -49,7 +49,9 @@ export default {
     box-sizing: border-box;
 }
 .sign-up {
-    height: 72vh;
+    height: 81.7vh;
+    width: 100%;
+    overflow-y:hidden;
     @include formMixin;
 }
 
