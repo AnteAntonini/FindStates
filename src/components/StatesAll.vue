@@ -2,14 +2,13 @@
   <div class="all-states">
     <h1>All states in {{region}}</h1>
     <ul v-for="(state,index) in allStates" :key="index">
-      <li class="item" @click="scrollToTop"><router-link :to="{name: 'StatesSingle', params: {state: state.name}}">{{state.name}} </router-link>
+      <li class="item"><router-link @click.native="scrollToTop" :to="{name: 'StatesSingle', params: {state: state.name}}">{{state.name}} </router-link>
         <label class="container">
           <input type="checkbox" v-model="selectedStates" :value="state.name">
           <span class="checkmark"></span>
         </label>
       </li>
     </ul>
-    {{ this.selectedStates}}
   </div>
 </template>
 
