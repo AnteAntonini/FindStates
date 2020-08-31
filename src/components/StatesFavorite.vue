@@ -17,7 +17,6 @@ export default {
   },
   computed: {
     favStates() {
-      console.log(this.$store.state.favStates);
       return this.$store.state.favStates;
     }
   }

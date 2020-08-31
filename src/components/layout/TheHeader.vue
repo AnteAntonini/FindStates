@@ -125,6 +125,22 @@ a {
   font-size: 1.2rem;
 }  */
 
+@media all and (max-width: 800px) {
+  .item.button {
+    display: none;
+  }
+  .logo {
+    font-size: 1.2rem;
+  }
+  .item.states {
+    margin: 15px;
+    left: 10rem;
+  }
+  #menuToggle {
+    display: block;
+  }
+}
+
 
 @media all and (max-width: 550px) {
   .item.button {
@@ -133,9 +149,18 @@ a {
   .logo {
     font-size: 1.2rem;
   }
+  .item {
+    bottom: 0.5rem;
+  }
   .item.home {
+    font-size: 1rem;
     margin: 15px;
-    left: -50px;
+    left: 7rem  ;
+  }
+  .item.states {
+    font-size: 1rem;
+    margin: 15px;
+    right: 50px;
   }
   #menuToggle {
     display: block;

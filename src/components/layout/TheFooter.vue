@@ -24,7 +24,7 @@ export default {
   .foot {
     width: 100%;
     height: 4rem;
-    position: relative;
+    position: fixed;
     background: brown;
     bottom: 0;
     box-shadow: 0 -4px 8px 0 rgba(0,0,0,0.4);

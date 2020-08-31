@@ -70,7 +70,7 @@ export default {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 250px 250px;
-    height: 69vh;
+    height: 70vh;
   }
   .card1,.card2,.card3 {
     grid-column: span 2;
