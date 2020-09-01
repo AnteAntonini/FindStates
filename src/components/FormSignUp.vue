@@ -7,15 +7,15 @@
     
     <form class="form">
         <div class="form_group">
-            <input type="text" placeholder="Username" class="form_input" />
+            <input type="text" placeholder="Username" class="form_input" required/>
         </div>
         
         <div class="form_group">
-            <input type="email" placeholder="Email" class="form_input" />
+            <input type="email" placeholder="Email" class="form_input" required/>
         </div>
         
         <div class="form_group">
-            <input type="password" placeholder="Password" class="form_input" />
+            <input type="password" placeholder="Password" class="form_input" required/>
         </div>
         
         <button class="btn" @click="myFilter" :class="{'form--no': isActive}">Register</button>
